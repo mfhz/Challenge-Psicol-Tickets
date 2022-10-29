@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "b19e30e2-839e-467c-b1fa-74b4f8feae1d",
+		"name": "Challenge-Psicol",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5389739"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/customer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/event",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register_Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"document\": \"11111111\",\n    \"names\": \"Martin prueba\",\n    \"birthday\": \"2022-02-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register_Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Misa\",\n    \"available_tickets\": 20,\n    \"date\": \"2022-10-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/event/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"event",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell_Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"event_id\": 1,\n    \"customer_id\": 1,\n    \"chair\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/ticket",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"document\": \"1214737718\",\n    \"names\": \"xxxxxxx\",\n    \"birthday\": \"2023-10-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customer/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:9000/api",
+			"type": "string"
+		}
+	]
+}

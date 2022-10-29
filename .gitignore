@@ -1,0 +1,41 @@
+.DS_Store
+front-psicol/node_modules
+front-psicol/dist
+
+
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Api
+api-rest/node_modules
+api-rest/public/build
+api-rest/public/hot
+api-rest/public/storage
+api-rest/storage/*.key
+api-rest/vendor
+api-rest.env
+api-rest.env.backup
+api-rest.env.production
+api-rest.phpunit.result.cache
+api-restHomestead.json
+api-restHomestead.yaml
+api-restauth.json
+api-restnpm-debug.log
+api-restyarn-error.log
+api-rest/.fleet
+api-rest/.idea
+api-rest/.vscode
